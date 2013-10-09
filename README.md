@@ -8,7 +8,7 @@ Offload your assets to a content delivery network by using an origin-pull and re
 To get the latest version of Simple CDN simply require it in your `composer.json` file.
 
 ~~~
-"damianromanowski/laravel-simplecdn": "dev-master"
+"damianromanowski/simplecdn": "dev-master"
 ~~~
 
 You'll then need to run `composer install` to download it and have the autoloader updated.
