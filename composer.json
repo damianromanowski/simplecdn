@@ -18,8 +18,7 @@
     "autoload": {
         "psr-0": {
             "Damianromanowski\\Simplecdn": "src/"
-        },
-        "files": ["src/filters.php"]
+        }
     },
     "minimum-stability": "dev"
 }
