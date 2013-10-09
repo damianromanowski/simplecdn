@@ -1,0 +1,22 @@
+{
+    "name": "damianromanowski/simplecdn",
+    "description": "Laravel 4 simple content delivery network URL rewriter",
+    "keywords": ["cdn"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Damian Romanowski",
+            "email": "damian@deb-admin.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.0.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Damianromanowski\\Simplecdn": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
