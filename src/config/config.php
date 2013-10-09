@@ -36,6 +36,8 @@ return array(
 	|--------------------------------------------------------------------------
 	|
 	| Rules for rewriting URLs. Seperate patterns with a pipe.
+	| The url parameter can be an array of hostnames, if set we will use a random
+	| value each time, or default back to the hostname specified above.
 	|
 	*/
 
