@@ -5,6 +5,9 @@ Offload your assets to a content delivery network by using an origin-pull and re
 
 ### Installation
 
+- [Simple CDN on Packagist](https://packagist.org/packages/damianromanowski/simplecdn)
+- [Simple CDN on GitHub](https://github.com/damianromanowski/simplecdn)
+
 To get the latest version of Simple CDN simply require it in your `composer.json` file.
 
 ~~~
