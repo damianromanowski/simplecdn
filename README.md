@@ -1,11 +1,11 @@
 ## Simple CDN for Laravel 4
 
-[![Build Status](https://travis-ci.org/damianromanowski/simplecdn.png?branch=master)](https://travis-ci.org/damianromanowski/simplecdn)
+[![Latest Stable Version](https://poser.pugx.org/damianromanowski/simplecdn/v/stable.png)](https://packagist.org/packages/damianromanowski/simplecdn) [![Total Downloads](https://poser.pugx.org/damianromanowski/simplecdn/downloads.png)](https://packagist.org/packages/damianromanowski/simplecdn) [![Build Status](https://travis-ci.org/damianromanowski/simplecdn.png?branch=master)](https://travis-ci.org/damianromanowski/simplecdn)
 
 Simple CDN provides a simple way of re-writing your URL's for specific assets using custom defined rules.
 Offload your assets to a content delivery network by using an origin-pull and re-writing your URL's to point to your off-site host.
 
-> Note that no URL's will only be rewritten in your production environment!
+> Note that URL's will only be rewritten in your production environment!
 
 ### Installation
 
