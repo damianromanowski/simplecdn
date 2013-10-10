@@ -42,6 +42,7 @@ return array(
 	*/
 
 	'rules' => array(
+
 		array(
 			/*'url'		=> array(
 				'http://images.example.com/',
@@ -50,18 +51,22 @@ return array(
 			'pattern'	=> 'png|tif|tiff|gif|jpeg|jpg|jif|jfif|jp2|jpx|j2k|j2c|ico',
 			'enabled'	=> true
 		),
+		
 		array(
 			'pattern'	=> 'css',
 			'enabled'	=> true
 		),
+		
 		array(
 			'pattern'	=> 'js',
 			'enabled'	=> true
 		),
+		
 		array(
 			'pattern'	=> 'asf|avi|flv|m1v|m2v|m4v|mkv|mpeg|mpg|mpe|ogg|rm|wmv|mp4|webm',
-			'enabled'	=> TRUE
+			'enabled'	=> true
 		)
+		
 	),
 
 );
