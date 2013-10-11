@@ -25,12 +25,21 @@ App::after(function($request, $response)
 	    		foreach (Config::get('simplecdn::rules') as $group)
 	    			if (@$group['enabled'] && preg_match('/\.(' . @$group['pattern'] . ')(?:[\?\#].*)?$/i', $uri, $matchess))
 	    			{
-	    				$cdn_url = Config::get('simplecdn::url')[array_rand(Config::get('simplecdn::url'))];
-	    				
+	    				$config_url = Config::get('simplecdn::url');
+	    				$config_remove = Config::get('simplecdn::remove');
+	    				$asset_path = str_replace(str_finish(url(), '/'), '', $uri);
+
 	    				if (isset($group['url']))
-	    					$cdn_url = $group['url'][array_rand($group['url'])];
-	    				
-						$output = str_replace($uri, str_replace(url() . '/', $cdn_url, $uri), $output);
+	    					$config_url = $group['url'];
+
+	    				if (isset($group['remove']))
+	    					$config_remove = $group['remove'];
+
+	    				if ($config_remove)
+	    					$asset_path = str_replace(str_finish($config_remove, '/'), '', $asset_path);
+
+	    				$cdn_url = is_array($config_url) ? $config_url[array_rand($config_url)] : $config_url;
+						$output = str_replace($uri, str_finish($cdn_url, '/') . $asset_path, $output);
 	    			}
 
 	    	$response->setContent($output);
