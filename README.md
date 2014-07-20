@@ -51,7 +51,7 @@ If you want to cycle between multiple hosts, just add them to the array.
 'url' => array(
 
 	'http://cdn1.example.com/',
-	'http://cdn2.example.com
+	'http://cdn2.example.com/'
 
 ),
 ~~~
