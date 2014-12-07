@@ -23,7 +23,7 @@ App::after(function($request, $response)
                 $urls = preg_match_all("#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|[^[:punct:]\s]|/)#", $output, $matches);
 
                 foreach ($matches[0] as $uri)
-                    if (strpos($uri,Request::root())) {
+                    if(strpos($uri,$request_root) > -1){
                         foreach (Config::get('simplecdn::rules') as $group)
                         if (@$group['enabled'] && preg_match('/\.(' . @$group['pattern'] . ')(?:[\?\#].*)?$/i', $uri, $matchess))
                         {
