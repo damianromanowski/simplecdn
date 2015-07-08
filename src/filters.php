@@ -23,7 +23,8 @@ App::after(function($request, $response)
                 $urls = preg_match_all("#\bhttps?://[^\s()<>]+(?:\([\w\d]+\)|[^[:punct:]\s]|/)#", $output, $matches);
 
                 foreach ($matches[0] as $uri)
-                    foreach (Config::get('simplecdn::rules') as $group)
+                    if(strpos($uri, Request::root()) > -1){
+                        foreach (Config::get('simplecdn::rules') as $group)
                         if (@$group['enabled'] && preg_match('/\.(' . @$group['pattern'] . ')(?:[\?\#].*)?$/i', $uri, $matchess))
                         {
                             $config_url = Config::get('simplecdn::url');
@@ -42,6 +43,7 @@ App::after(function($request, $response)
                             $cdn_url = is_array($config_url) ? $config_url[array_rand($config_url)] : $config_url;
                             $output = str_replace($uri, str_finish($cdn_url, '/') . $asset_path, $output);
                         }
+                    }
 
                 $response->setContent($output);
             }
